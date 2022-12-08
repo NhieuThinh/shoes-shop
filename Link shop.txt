@@ -1,0 +1,6 @@
+Client:		   https://thriving-bubblegum-a60d52.netlify.app/
+Server:		   https://shoes-shop-project.herokuapp.com/
+Admin's dashboard: https://regal-pony-f08f48.netlify.app/
+
+Admin's dashboard account: email: admin@example.com
+			   pw:	  123456 
