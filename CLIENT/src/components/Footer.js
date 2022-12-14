@@ -1,41 +1,141 @@
-import React from "react";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
+import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
+import PinterestIcon from '@mui/icons-material/Pinterest';
+import RoomIcon from '@mui/icons-material/Room';
+import TwitterIcon from '@mui/icons-material/Twitter';
+
+import styled from "styled-components";
+
+
+const Container = styled.div`
+  display: flex;
+
+`;
+
+const Left = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+`;
+
+const Logo = styled.h1``;
+
+const Desc = styled.p`
+  margin: 20px 0px;
+`;
+
+const SocialContainer = styled.div`
+  display: flex;
+`;
+
+const SocialIcon = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: #${(props) => props.color};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+`;
+
+const Center = styled.div`
+  flex: 1;
+  padding: 20px;
+
+`;
+
+const Title = styled.h3`
+  margin-bottom: 30px;
+`;
+
+const List = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const ListItem = styled.li`
+  width: 50%;
+  margin-bottom: 10px;
+`;
+
+const Right = styled.div`
+  flex: 1;
+  padding: 20px;
+
+`;
+
+const ContactItem = styled.div`
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+`;
+
+const Payment = styled.img`
+    width: 50%;
+`;
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="justify-content-center d-flex">
-        <div className="card-name">
-          <img
-            alt="mastercard"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/1200px-MasterCard_Logo.svg.png"
-          />
-        </div>
-        <div className="card-name">
-          <img
-            alt="visa"
-            src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
-          />
-        </div>
-        <div className="card-name">
-          <img
-            alt="paypal"
-            src="https://pbs.twimg.com/media/EfTZlEnWAAMn1lX.png"
-          />
-        </div>
-        <div className="card-name">
-          <img
-            alt="express"
-            src="https://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/American-Express-icon.png"
-          />
-        </div>
-        <div className="card-name">
-          <img
-            alt="discover"
-            src="https://icons-for-free.com/iconfiles/png/512/cash+checkout+discover+network+online+shopping+payment+method-1320191225548835050.png"
-          />
-        </div>
-      </div>
-    </div>
+    <Container>
+      <Left>
+        <Logo>GROUP3.STORE</Logo>
+        <Desc>
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomised words which don’t look even slightly believable.
+        </Desc>
+        <SocialContainer>
+          <SocialIcon color="3B5999">
+            <FacebookIcon />
+          </SocialIcon>
+          <SocialIcon color="E4405F">
+            <InstagramIcon />
+          </SocialIcon>
+          <SocialIcon color="55ACEE">
+            <TwitterIcon />
+          </SocialIcon>
+          <SocialIcon color="E60023">
+            <PinterestIcon />
+          </SocialIcon>
+        </SocialContainer>
+      </Left>
+      <Center>
+        <Title>Useful Links</Title>
+        <List>
+          <ListItem>Home</ListItem>
+          <ListItem>Cart</ListItem>
+          <ListItem>Man Fashion</ListItem>
+          <ListItem>Woman Fashion</ListItem>
+          <ListItem>Accessories</ListItem>
+          <ListItem>My Account</ListItem>
+          <ListItem>Order Tracking</ListItem>
+          <ListItem>Wishlist</ListItem>
+          <ListItem>Wishlist</ListItem>
+          <ListItem>Terms</ListItem>
+        </List>
+      </Center>
+      <Right>
+        <Title>Contact</Title>
+        <ContactItem>
+          <RoomIcon style={{marginRight:"10px"}}/> 1 Vo Van Ngan, HCMUTE, HCM city, VietName
+        </ContactItem>
+        <ContactItem>
+          <PhoneOutlinedIcon style={{marginRight:"10px"}}/> +1 234 56 78
+        </ContactItem>
+        <ContactItem>
+          <MailOutlinedIcon style={{marginRight:"10px"}} /> contact@group3.projectThayBao
+        </ContactItem>
+        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+      </Right>
+    </Container>
   );
 };
 

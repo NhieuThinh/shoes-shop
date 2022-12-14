@@ -15,7 +15,7 @@ import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
 import NotFound from "./screens/NotFound";
 import PrivateRouter from "./PrivateRouter";
-
+import ListProduct from "./screens/ListProduct";
 const App = () => {
   return (
     <Router>
@@ -28,6 +28,7 @@ const App = () => {
           component={HomeScreen}
           exact
         />
+        <Route path="/product/:category" component={ListProduct}/>
         <Route path="/products/:id" component={SingleProduct} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
