@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   height: 60vh;
-  background-color: #fcf5f5;
+  background-color: #ececec;
   display: flex;
   align-items: center;
   justify-content: center;

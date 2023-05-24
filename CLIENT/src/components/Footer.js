@@ -5,13 +5,14 @@ import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import RoomIcon from '@mui/icons-material/Room';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import ImageLogo from "../images/logoshoe2.png"
 
 import styled from "styled-components";
 
 
 const Container = styled.div`
   display: flex;
-
+  background-color: #ffffff;
 `;
 
 const Left = styled.div`
@@ -104,6 +105,9 @@ const Footer = () => {
           </SocialIcon>
           <SocialIcon color="E60023">
             <PinterestIcon />
+          </SocialIcon>
+          <SocialIcon color="E60023">
+            <img src={ImageLogo} alt='Logo'/>
           </SocialIcon>
         </SocialContainer>
       </Left>

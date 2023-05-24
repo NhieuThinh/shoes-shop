@@ -11,6 +11,8 @@ import {
 import Loading from "../components/LoadingError/Loading";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../Redux/Constants/ProductConstants";
 import moment from "moment";
+import ScrollButton from "../components/homeComponents/ScrollButton/ScrollUpButton";
+import HeaderMiss from "../components/HeaderMiss";
 
 const SingleProduct = ({ history, match }) => {
   const [qty, setQty] = useState(1);
@@ -56,7 +58,9 @@ const SingleProduct = ({ history, match }) => {
   };
   return (
     <>
-      <Header />
+      <HeaderMiss />
+      <ScrollButton/>
+      {/* <div style={{height: "100px"}}></div> */}
       <div className="container single-product">
         {loading ? (
           <Loading />
@@ -132,7 +136,7 @@ const SingleProduct = ({ history, match }) => {
               <div className="col-md-6">
                 <h6 className="mb-3">REVIEWS</h6>
                 {product.reviews.length === 0 && (
-                  <Message variant={"alert-info mt-3"}>No Reviews</Message>
+                  <Message variant={"alert-dark mt-3"}>No Reviews</Message>
                 )}
                 {product.reviews.map((review) => (
                   <div

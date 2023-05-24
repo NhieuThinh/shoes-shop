@@ -10,6 +10,8 @@ import moment from "moment";
 import axios from "axios";
 import { ORDER_PAY_RESET } from "../Redux/Constants/OrderConstants";
 import {URL} from "../Redux/Url";
+import ScrollButton from "../components/homeComponents/ScrollButton/ScrollUpButton";
+import HeaderMiss from "../components/HeaderMiss";
 
 const OrderScreen = ({ match }) => {
   window.scrollTo(0, 0);
@@ -62,7 +64,9 @@ const OrderScreen = ({ match }) => {
 
   return (
     <>
-      <Header />
+      <HeaderMiss />
+      <ScrollButton/>
+      {/* <div style={{height: "100px"}}></div> */}
       <div className="container">
         {loading ? (
           <Loading />

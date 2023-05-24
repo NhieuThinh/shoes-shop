@@ -3,6 +3,8 @@ import Header from "./../components/Header";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removefromcart } from "./../Redux/Actions/cartActions";
+import ScrollButton from "../components/homeComponents/ScrollButton/ScrollUpButton";
+import HeaderMiss from "../components/HeaderMiss";
 
 const CartScreen = ({ match, location, history }) => {
   window.scrollTo(0, 0);
@@ -30,7 +32,9 @@ const CartScreen = ({ match, location, history }) => {
   };
   return (
     <>
-      <Header />
+      <HeaderMiss />
+      <ScrollButton/>
+      {/* <div style={{height: "100px"}}></div> */}
       {/* Cart */}
       <div className="container">
         {cartItems.length === 0 ? (

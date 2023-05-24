@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../Redux/Actions/userActions";
-
+import ImageLogo from "../images/logoshoe2.png"
 const Header = () => {
   const [keyword, setKeyword] = useState();
   const dispatch = useDispatch();
@@ -16,7 +16,6 @@ const Header = () => {
   const logoutHandler = () => {
     dispatch(logout());
   };
-
   const submitHandler = (e) => {
     e.preventDefault();
     if (keyword.trim()) {
@@ -24,9 +23,13 @@ const Header = () => {
     } else {
       history.push("/");
     }
+    setTimeout(() => {
+      window.scrollTo({ top: 1080, left: 0, behavior: 'smooth' });
+    }, 0); // Đợi 100ms trước khi cuộn trang
+
   };
   return (
-    <div>
+    <div className="bigheader">
       {/* Top Header */}
       <div className="Announcement ">
         <div className="container">
@@ -55,7 +58,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/* Header */}
+      {/* {Header} */}
       <div className="header">
         <div className="container">
           {/* MOBILE HEADER */}
@@ -64,7 +67,7 @@ const Header = () => {
               <div className="row ">
                 <div className="col-6 d-flex align-items-center">
                   <Link className="navbar-brand" to="/">
-                    <img alt="logo" src="/images/logo.png" />
+                    <img alt="logo" src="/images/1.png" />
                   </Link>
                 </div>
                 <div className="col-6 d-flex align-items-center justify-content-end Login-Register">
@@ -129,7 +132,7 @@ const Header = () => {
                       placeholder="Search"
                       onChange={(e) => setKeyword(e.target.value)}
                     />
-                    <button type="submit" className="search-button">
+                    <button type="submit" className="search-button" >
                       search
                     </button>
                   </form>
@@ -139,11 +142,11 @@ const Header = () => {
           </div>
 
           {/* PC HEADER */}
-          <div className="pc-header">
+          <div className="pc-header sticky">
             <div className="row">
               <div className="col-md-3 col-4 d-flex align-items-center">
                 <Link className="navbar-brand" to="/">
-                  <img alt="logo" src="/images/logo.png" />
+                  <img alt="logo" src={ImageLogo}/>
                 </Link>
               </div>
               <div className="col-md-6 col-8 d-flex align-items-center">
@@ -154,7 +157,7 @@ const Header = () => {
                     placeholder="Search"
                     onChange={(e) => setKeyword(e.target.value)}
                   />
-                  <button type="submit" className="search-button">
+                  <button type="submit" className="search-button" >
                     search
                   </button>
                 </form>

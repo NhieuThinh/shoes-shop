@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { savePaymentMethod } from "../Redux/Actions/cartActions";
 import Header from "./../components/Header";
+import ScrollButton from "../components/homeComponents/ScrollButton/ScrollUpButton";
+import HeaderMiss from "../components/HeaderMiss";
 
 const PaymentScreen = ({ history }) => {
   window.scrollTo(0, 0);
@@ -24,7 +26,9 @@ const PaymentScreen = ({ history }) => {
   };
   return (
     <>
-      <Header />
+      <HeaderMiss />
+      <ScrollButton/>
+      {/* <div style={{height: "100px"}}></div> */}
       <div className="container d-flex justify-content-center align-items-center login-center">
         <form
           className="Login2 col-md-8 col-lg-4 col-11"

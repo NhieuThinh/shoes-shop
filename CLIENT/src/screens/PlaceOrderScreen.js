@@ -5,6 +5,8 @@ import { createOrder } from "../Redux/Actions/OrderActions";
 import { ORDER_CREATE_RESET } from "../Redux/Constants/OrderConstants";
 import Header from "./../components/Header";
 import Message from "./../components/LoadingError/Error";
+import ScrollButton from "../components/homeComponents/ScrollButton/ScrollUpButton";
+import HeaderMiss from "../components/HeaderMiss";
 
 const PlaceOrderScreen = ({ history }) => {
   window.scrollTo(0, 0);
@@ -56,7 +58,9 @@ const PlaceOrderScreen = ({ history }) => {
 
   return (
     <>
-      <Header />
+      <HeaderMiss />
+      <ScrollButton/>
+      {/* <div style={{height: "100px"}}></div> */}
       <div className="container">
         <div className="row  order-detail">
           <div className="col-lg-4 col-sm-4 mb-lg-4 mb-5 mb-sm-0">

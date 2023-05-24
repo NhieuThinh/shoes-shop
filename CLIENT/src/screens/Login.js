@@ -5,6 +5,7 @@ import Message from "../components/LoadingError/Error";
 import Loading from "../components/LoadingError/Loading";
 import Header from "./../components/Header";
 import { login } from "./../Redux/Actions/userActions";
+import HeaderMiss from "../components/HeaderMiss";
 
 const Login = ({ location, history }) => {
   window.scrollTo(0, 0);
@@ -30,7 +31,8 @@ const Login = ({ location, history }) => {
 
   return (
     <>
-      <Header />
+      <HeaderMiss />
+      {/* <div style={{height: "100px"}}></div> */}
       <div className="container d-flex flex-column justify-content-center align-items-center login-center">
         {error && <Message variant="alert-danger">{error}</Message>}
         {loading && <Loading />}

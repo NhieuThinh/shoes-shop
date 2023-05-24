@@ -7,14 +7,14 @@ import { listProduct } from "../../Redux/Actions/ProductActions";
 import Loading from "../LoadingError/Loading";
 import Message from "../LoadingError/Error";
 import styled from "styled-components";
-
+//import ImageSHhoe from "../../images/3.png"
 
 const Info = styled.div`
   height: 250px;
   position: relative;
   overflow: hidden;
   width: 100%;
-  background-color: #f3fbf7;
+  background-color: #f6f6f6;
   transition: all 0.5s ease;
   `;
 const Image=styled.img`
@@ -62,9 +62,9 @@ const ShopSection = (props) => {
                         <div
                           className="shop col-lg-4 col-md-6 col-sm-6"
                           key={product._id}
-                        >
+                          >
                           <div className="border-product">
-                            <Link to={`/products/${product._id}`}>
+                          <Link to={`/products/${product._id}`}>
                             <Container>
                               <Info>
                                 <Image src={product.image} alt={product.name} />
@@ -107,12 +107,12 @@ const ShopSection = (props) => {
                             <div className="shoptext">
                               <p>
                                 <Link to={`/products/${product._id}`}>
-                                  {product.name}
+                                {product.name}
                                 </Link>
                               </p>
 
                               <Rating
-                                value={product.rating}
+                                value="5"
                                 text={`${product.numReviews} reviews`}
                               />
                               <h3>${product.price}</h3>
@@ -124,13 +124,15 @@ const ShopSection = (props) => {
                     }
                   </>
                 )}
-
-                {/* Pagination */}
-                <Pagination
+                
+                {/* Pagination */
+                cate===""&&
+                (<Pagination
                   pages={pages}
                   page={page}
                   keyword={keyword ? keyword : ""}
-                />
+                />)
+                }
               </div>
             </div>
           </div>

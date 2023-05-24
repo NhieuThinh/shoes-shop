@@ -39,24 +39,41 @@ textarea:focus {
   margin: 0;
   padding: 0;
 }
+.bigheader{
+  /* margin-bottom: 100px; */
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 99;
+}
+.bigheader-Miss{
+  /* margin-bottom: 100px;
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 99; */
+  margin-right: 17px;;
+}
 .Announcement {
-  background-color: #1cb803;
+  background-color: #e6e6e6;
   padding: 10px 0px 6px 0px;
+
 }
 .Announcement .col-md-6 p {
-  color: white;
+  color:#000000;
   margin-right: 6rem;
   font-size: 15px;
 }
 .Announcement .col-12 a {
-  color: white;
+  color: rgb(0, 0, 0);
   margin-right: 2rem;
   font-size: 15px;
 }
 /* Header */
 .header {
-  padding: 10px 0px 10px 0px;
+  background-color:white;
 }
+
 .navbar-brand img {
   width: 60%;
 }
@@ -66,11 +83,23 @@ textarea:focus {
 }
 .search-button {
   width: 20%;
-  background-color: black;
+  background-color: rgb(70, 70, 70);
   color: white;
   border: 0;
   text-transform: uppercase;
   font-size: 12px;
+}
+.Login-Register-Miss{
+  margin-left:648px;
+}
+.Login-Register-Miss a {
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-right: 2rem;
+  position: relative;
+}
+.Login-Register-Miss a:nth-last-child(1) {
+  margin-right: 0rem;
 }
 .Login-Register a {
   text-transform: uppercase;
@@ -121,7 +150,11 @@ textarea:focus {
   width: 100%;
   padding-bottom: 6%;
   padding-top: 2%;
+  background-color: #fafafa;
+
 }
+.container{
+} 
 .sidebar_item {
   margin-bottom: 35px;
 }
@@ -157,7 +190,8 @@ textarea:focus {
 }
 .border-product {
   padding: 15px;
-  border: 1px solid #f3f3f3;
+  /* border: 1px solid #f3f3f3; */
+  border:none;
   border-radius: 5px;
 }
 .shopBack {
@@ -165,7 +199,7 @@ textarea:focus {
   position: relative;
   overflow: hidden;
   width: 100%;
-  background-color: #f3fbf7;
+  background-color: #f6f6f6;
 }
 .shopBack img {
   width: 100%;
@@ -284,7 +318,7 @@ textarea:focus {
   margin-bottom: 50px;
 }
 .single-image {
-  background-color: #f3fbf7;
+  background-color: #f6f6f6;
   margin-right: 20px;
   height: 700px;
   display: flex;
@@ -351,7 +385,7 @@ textarea:focus {
 }
 .round-black-btn:hover,
 .round-black-btn:focus {
-  background: #1cb803;
+  background: #b1b0b0;
 }
 
 /* LOGIN */
@@ -384,15 +418,15 @@ textarea:focus {
   margin-top: 20px;
   padding: 20px 0;
   border: 0;
-  background-color: #1cb803;
+  background-color: #cbc9c9;
   border-radius: 5px;
   text-transform: uppercase;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .Login button a,
 .Login2 button a {
   text-transform: uppercase;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .Login p {
   margin-top: 30px;
@@ -436,7 +470,7 @@ textarea:focus {
   border-top: 1px solid #e4e4e4;
 }
 .wizard .nav .active {
-  background-color: #e5fee9;
+  background-color: #f1f1f1;
   color: black;
 }
 .badge2 {
@@ -461,7 +495,7 @@ textarea:focus {
 .form input {
   padding: 20px 10px;
   font-size: 17px;
-  background-color: #e5fee9;
+  background-color: #f2f2f2;
 }
 .form-container button {
   padding: 15px 0;
@@ -469,7 +503,7 @@ textarea:focus {
   margin-top: 20px;
   text-transform: uppercase;
   font-size: 13px;
-  background-color: #1cb803;
+  background-color: #53c1da;
   color: #ffffff;
 }
 /* orders */
@@ -562,7 +596,7 @@ textarea:focus {
   border: 0px;
   text-transform: uppercase;
   font-size: 13px;
-  background-color: #1cb803;
+  background-color: #7bcfed;
   color: #ffffff;
 }
 .cart-buttons a:nth-child(1) button {
@@ -602,7 +636,7 @@ textarea:focus {
 }
 .order-detail {
   padding: 30px 0;
-  background-color: #e5fee9;
+  background-color: #d5f3ff;
 }
 .order-detail h5 {
   margin-bottom: 6px;
@@ -638,9 +672,9 @@ textarea:focus {
   padding: 15px 0;
   border: 0px;
   text-transform: uppercase;
-  font-size: 13px;
-  background-color: #1cb803;
-  color: #ffffff;
+  font-size: 13px bold;
+  background-color: #89d3f5;
+  color: #000000;
 }
 
 /* Pagination */
